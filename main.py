@@ -14,6 +14,32 @@ def main():
             else:
                 constBoard(board)
                 playerTurn(board)
+    elif choice==2:
+        print("Player 1: O\n Player 2:X")
+        for i in range(9):
+            if analyzeboard(board)!=0:
+                break
+            if i%2==0:
+                constBoard(board)   
+                playerTurn(board)
+            else:
+                constBoard(board)
+                player2Turn(board)   
+    else:
+        print("Wrong choice")
+    x = analyzeboard(board) 
+    if x==0:
+        constBoard(board)
+        print("Draw")
+    elif x==-1:
+        constBoard(board)
+        print("Player 1 wins")
+    elif x==1:
+        constBoard(board)
+        print("Player 2 wins")
+    else:
+        constBoard(board)
+        print("Computer wins")
             
 
 
