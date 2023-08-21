@@ -1,3 +1,20 @@
+def constBoard(board):
+    print("current board: \n\n")
+    for i in range(9):
+        if i>0 and i%3==0:
+            print("\n")
+        if board[i]==0:
+            print("_", end=" ")
+        elif board[i]==-1:
+            print("X", end=" ")
+        else:
+            print("O", end=" ")
+    print("\n\n")
+    # print(board[0], "|", board[1], "|", board[2])
+    # print("---------")
+    # print(board[3], "|", board[4], "|", board[5])
+    # print("---------")
+    # print(board[6], "|", board[7], "|", board[8])  
 def main():
     choice = input("How do you want to play \n 1-Single player \n 2-Multiplyer \n")
     choice = int(choice)
