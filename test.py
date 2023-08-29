@@ -4,12 +4,11 @@ def constBoard(board):
     print("---------")
     print(board[3], "|", board[4], "|", board[5])
     print("---------")
-    print(board[6], "|", board[7], "|", board[8])
+    print(board[6], "|", board[7], "|", board)
+    print("---------")
 for i in range(0, 9):
-    print("Enter the position you want to place your X or O")
-    pos = int(input())
     if i % 2 == 0:
-        board[pos] = "X"
+        board[i] = "X"
     else:
-        board[pos] = "O"
+        board[i] = "O"
 constBoard(board)
