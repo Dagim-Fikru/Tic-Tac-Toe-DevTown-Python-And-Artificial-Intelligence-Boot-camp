@@ -7,14 +7,27 @@ def constBoard(board):
             print("_", end=" ")
         elif board[i]==-1:
             print("X", end=" ")
-        else:
+        elif board[i]==1:
             print("O", end=" ")
+        else:
+            print("Error")
     print("\n\n")
-    # print(board[0], "|", board[1], "|", board[2])
-    # print("---------")
-    # print(board[3], "|", board[4], "|", board[5])
-    # print("---------")
-    # print(board[6], "|", board[7], "|", board[8])  
+def playerTurn(board):
+    position = input("Enter position from 1-9\n")
+    position = int(position)
+    if board[position-1]==0:
+        board[position-1]=-1
+    else:
+        print("Wrong position")
+        playerTurn(board)
+def player2Turn(board):
+    position = input("Enter position from 1-9\n")
+    position = int(position)
+    if board[position-1]==0:
+        board[position-1]=1
+    else:
+        print("Wrong position")
+        player2Turn(board)
 def main():
     choice = input("How do you want to play \n 1-Single player \n 2-Multiplyer \n")
     choice = int(choice)
@@ -57,7 +70,6 @@ def main():
     else:
         constBoard(board)
         print("Computer wins")
-
 
 
         
