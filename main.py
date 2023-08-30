@@ -57,7 +57,6 @@ def main():
     else:
         constBoard(board)
         print("Computer wins")
-            
 
 
 

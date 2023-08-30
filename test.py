@@ -11,4 +11,3 @@ for i in range(0, 9):
         board[i] = "X"
     else:
         board[i] = "O"
-constBoard(board)
