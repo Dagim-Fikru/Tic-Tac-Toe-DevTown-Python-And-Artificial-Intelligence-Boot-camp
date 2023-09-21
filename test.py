@@ -8,6 +8,6 @@ def constBoard(board):
     print("---------")
 for i in range(0, 9):
     if i % 2 == 0:
-        board[i] = "X"
-    else:
         board[i] = "O"
+    else:
+        board[i] = "X"
